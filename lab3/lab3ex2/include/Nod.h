@@ -8,12 +8,13 @@ class Nod
         Nod(int info=0, Nod* succ=nullptr);
         ~Nod();
         Nod(const Nod& other);
-
-    protected:
+        inline int getInfo() {return this->info;}
+        inline Nod* getSucc() {return this->succ;}
 
     private:
         int info;
         Nod* succ;
+		friend class LSI;
 };
 
 #endif // NOD_H
